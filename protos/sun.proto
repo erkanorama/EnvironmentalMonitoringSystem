@@ -7,7 +7,7 @@ service Sunlight {
 }
 
 message SunlightData {
-    float uvIndex = 1; // 
+    float uvIndex = 1; // UV index
     float temperature = 2; // Temperature in Celsius
     string riskLevel = 3; // Sun-related risk level (e.g., low, moderate, high)
 }
