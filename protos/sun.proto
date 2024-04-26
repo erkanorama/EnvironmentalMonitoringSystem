@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+service Sunlight {
+    rpc StreamSunlightInfo(google.protobuf.Empty) returns (stream SunlightData) {}
+}
+
+message SunlightData {
+    float uvIndex = 1; // 
+    float temperature = 2; // Temperature in Celsius
+    string riskLevel = 3; // Sun-related risk level (e.g., low, moderate, high)
+}

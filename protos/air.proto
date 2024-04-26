@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+service AirQuality {
+    rpc StreamAirQuality(google.protobuf.Empty) returns (stream AirQualityData) {}
+}
+
+message AirQualityData {
+    float co2Level = 1; // Carbon dioxide level
+    float no2Level = 2; // Nitrogen dioxide level
+    float so2Level = 3; // Sulfur dioxide level
+    float humidity = 4; // Relative humidity in percentage
+}

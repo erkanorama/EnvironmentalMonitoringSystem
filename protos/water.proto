@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+
+service WaterQuality {
+    rpc StreamWaterQuality(google.protobuf.Empty) returns (stream WaterQualityData) {}
+}
+
+message WaterQualityData {
+    float pH = 1; // Measure of acidity or alkalinity of water
+    float chlorineLevel = 2; // Level of chlorine in water
+    float fluorideLevel = 3; // Level of fluoride in water
+    float hardnessLevel = 4; // Measure of water hardness
+}
