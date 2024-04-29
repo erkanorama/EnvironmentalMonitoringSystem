@@ -39,7 +39,7 @@ function getSunRiskLevel(uvIndex) {
     const thresholds = [
         { level: "safe", threshold: 2 },
         { level: "low", threshold: 5 },
-        { level: "medium", threshold: 7 },
+        { level: "moderate", threshold: 7 },
         { level: "high", threshold: 10 },
         { level: "critical", threshold: 12 },
         { level: "extreme", threshold: 15 }
