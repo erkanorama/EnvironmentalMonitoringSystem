@@ -1,11 +1,13 @@
 syntax = "proto3";
 
+// Request message (Empty)
 import "google/protobuf/empty.proto";
 
 service Sunlight {
     rpc StreamSunlightInfo(google.protobuf.Empty) returns (stream SunlightData) {}
 }
 
+// Response message (SunlightData)
 message SunlightData {
     float uvIndex = 1; // UV index
     float temperature = 2; // Temperature in Celsius
