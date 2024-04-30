@@ -1,3 +1,4 @@
+// gRPC, Protocol Buffers and Node.js
 const grpc = require('@grpc/grpc-js');
 const protoLoader = require('@grpc/proto-loader');
 const path = require('path');
@@ -26,7 +27,7 @@ function streamAirQuality(call) {
             humidity: Math.round(Math.random() * 100)   // Humidity between 0 and 100 percent
         };
         call.write(airQualityData);
-    }, 1000);
+    }, 2000);
 
     call.on('cancelled', () => {
         clearInterval(interval);
@@ -66,7 +67,7 @@ function streamSunlightInfo(call) {
             riskLevel
         };
         call.write(sunlightData);
-    }, 1000);
+    }, 2000);
 
     call.on('cancelled', () => {
         clearInterval(interval);
@@ -83,7 +84,7 @@ function streamWaterQuality(call) {
             hardnessLevel: Math.round(Math.random() * 200)  // Hardness level between 0 and 200 ppm
         };
         call.write(waterQualityData);
-    }, 1000);
+    }, 2000);
 
     call.on('cancelled', () => {
         clearInterval(interval);

@@ -1,3 +1,4 @@
+// gRPC, Protocol Buffers and Node.js
 const grpc = require('@grpc/grpc-js');
 const protoLoader = require('@grpc/proto-loader');
 const path = require('path');
@@ -21,6 +22,7 @@ const airClient = new airProto('localhost:50051', grpc.credentials.createInsecur
 const sunClient = new sunProto('localhost:50051', grpc.credentials.createInsecure());
 const waterClient = new waterProto('localhost:50051', grpc.credentials.createInsecure());
 
+//Fetch data from the server for relevant service
 function fetchAirQualityData() {
     console.log('\nFetching Air Quality Data...');
     const call = airClient.StreamAirQuality({});
